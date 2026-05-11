@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <nav className="bg-white shadow-md">
@@ -11,15 +12,15 @@ export default function Navigation() {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <a href="#home" className="text-xl font-bold text-gray-800">Research Lab</a>
+              <a href="/" className="text-xl font-bold text-gray-800">Research Lab</a>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a href="#home" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                <a href="#about" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
-                <a href="#research" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Research</a>
-                <a href="#team" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Team</a>
-                <a href="#contact" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                <a href="/" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="/about" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                <a href="/research" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Research</a>
+                <a href="/team" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Team</a>
+                <a href="/contact" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
               </div>
             </div>
           </div>
@@ -49,11 +50,11 @@ export default function Navigation() {
       {isOpen && (
         <div className="md:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#home" className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-            <a href="#about" className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">About</a>
-            <a href="#research" className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Research</a>
-            <a href="#team" className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Team</a>
-            <a href="#contact" className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            <a href="/" onClick={closeMenu} className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="/about" onClick={closeMenu} className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">About</a>
+            <a href="/research" onClick={closeMenu} className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Research</a>
+            <a href="/team" onClick={closeMenu} className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Team</a>
+            <a href="/contact" onClick={closeMenu} className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
           </div>
         </div>
       )}

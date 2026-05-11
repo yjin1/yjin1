@@ -63,7 +63,7 @@ export default function AIHealthcare() {
           </div>
         </div>
         <div className="mt-12 text-center">
-          <a href="#contact" className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+          <a href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
             Contact Us for Collaboration
           </a>
         </div>
